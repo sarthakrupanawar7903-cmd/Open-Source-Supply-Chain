@@ -29,7 +29,7 @@ The system identifies critical dependencies, affected applications, propagation 
 ##  Key Features
 
 - Dependency graph builder from package manifests, lockfiles, and SBOMs
-- Critical dependency detection using graph centrality and blast-radius analysis
+- Critical dependency detection using graph centrality a         blast-radius analysis
 - Compromise propagation simulation
 - Affected application and dependency path explorer
 - Explainable risk alerts — not just a vulnerability score

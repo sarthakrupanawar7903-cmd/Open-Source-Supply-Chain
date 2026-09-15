@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SentinelX — Enterprise Cybersecurity Platform</title>
+    <link rel="stylesheet" href="/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- ===================== SHARED NAV ===================== -->
+<nav class="top-nav" id="shared-nav">
+    <div class="nav-container">
+        <div class="nav-brand" onclick="showView('landing')" style="cursor:pointer;">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none">
+                <path d="M12 2L3 6v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V6l-9-4z" fill="#3B82F6"/>
+                <path d="M10 12l1.8 1.8L16 9.5" stroke="#fff" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <span class="brand-name">Sentinel<span class="brand-accent">X</span></span>
+        </div>
+        <div class="nav-links">
+            <a href="#" data-nav="landing" onclick="event.preventDefault(); showView('landing');">Home</a>
+            <a href="#" data-nav="platform" onclick="event.preventDefault(); showView('platform');">Platform</a>
+            <a href="#" data-nav="solutions" onclick="event.preventDefault(); showView('solutions');">Solutions</a>
+            <a href="#" data-nav="resources" onclick="event.preventDefault(); showView('resources');">Resources</a>
+            <a href="#" data-nav="pricing" onclick="event.preventDefault(); showView('pricing');">Pricing</a>
+        </div>
+        <div class="nav-actions">
+            <a href="#" class="nav-signin" onclick="event.preventDefault(); showView('signin');">Sign In</a>
+            <button class="btn btn-primary" onclick="showAppView()">Request Demo</button>
+        </div>
+    </div>
+</nav>
+
+<!-- ===================== LANDING VIEW ===================== -->
+<div id="view-landing" class="page-view">
+    <section class="hero">
+        <div class="hero-bg-grid"></div>
+        <div class="hero-bg-glow"></div>
+        <div class="hero-container">
+            <div class="hero-left">
+                <div class="hero-eyebrow">ENTERPRISE CYBERSECURITY PLATFORM</div>
+                <h1 class="hero-title">Detect. Respond.<br><span class="accent-cyan">Stay Ahead.</span></h1>
+                <p class="hero-subtitle">
+                    AI-powered threat detection and response for modern enterprises.
+                    Protect your data, infrastructure and people from evolving cyber threats — before they become breaches.
+                </p>
+                <div class="hero-buttons">
+                    <button class="btn btn-primary btn-lg" onclick="showAppView()">
+                        Get Started
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" style="margin-left:8px;"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </button>
+                    <button class="btn btn-outline btn-lg" onclick="showToast('Demo video coming soon')">
+                        Watch Demo
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" style="margin-left:8px;"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.5"/><path d="M10 8l6 4-6 4V8z" fill="currentColor"/></svg>
+                    </button>
+                </div>
+            </div>
+            <div class="hero-right">
+                <div class="shield-container">
+                    <div class="shield-rings"></div>
+                    <div class="shield-glow"></div>
+                    <svg class="shield-svg" viewBox="0 0 300 380" fill="none">
+                        <defs>
+                            <linearGradient id="shieldGrad" x1="0" y1="0" x2="0" y2="1">
+                                <stop offset="0%" stop-color="#3B82F6"/>
+                                <stop offset="100%" stop-color="#1E40AF"/>
+                            </linearGradient>
+                        </defs>
+                        <path d="M150 10 L280 60 L280 200 C280 290 220 350 150 370 C80 350 20 290 20 200 L20 60 Z" fill="url(#shieldGrad)" opacity="0.9"/>
+                        <path d="M150 40 L255 80 L255 200 C255 275 205 325 150 342 C95 325 45 275 45 200 L45 80 Z" fill="rgba(34,211,238,0.15)" stroke="#22D3EE" stroke-width="2" stroke-opacity="0.6"/>
+                        <rect x="115" y="180" width="70" height="60" rx="8" fill="#0B1220" stroke="#22D3EE" stroke-width="2"/>
+                        <path d="M130 180 V165 C130 145 145 135 150 135 C155 135 170 145 170 165 V180" stroke="#22D3EE" stroke-width="4" fill="none" stroke-linecap="round"/>
+                        <circle cx="150" cy="205" r="8" fill="#22D3EE"/>
+                    </svg>
+                </div>
+                <div class="stat-cards">
+                    <div class="stat-card">
+                        <div class="stat-row"><span class="stat-dot green"></span><span class="stat-label">Threats Blocked</span></div>
+                        <div class="stat-value-row"><span class="stat-value">2,847</span><span class="stat-change up">↑ 12%</span></div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-row"><span class="stat-dot blue"></span><span class="stat-label">Systems Protected</span></div>
+                        <div class="stat-value-row"><span class="stat-value">124</span><span class="stat-change up">↑ 8%</span></div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-row"><span class="stat-dot cyan"></span><span class="stat-label">Response Time</span></div>
+                        <div class="stat-value-row"><span class="stat-value">&lt; 1 min</span><span class="stat-change down">↓ 64%</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="feature-strip">
+        <div class="feature-container">
+            <div class="feature"><div class="feature-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 2L3 6v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V6l-9-4z" stroke="#3B82F6" stroke-width="1.8" fill="none"/></svg></div><div><h4>Threat Detection</h4><p>AI-driven threat intelligence and real-time monitoring</p></div></div>
+            <div class="feature"><div class="feature-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="#3B82F6" stroke-width="1.8"/></svg></div><div><h4>Incident Response</h4><p>Automated and guided response workflows</p></div></div>
+            <div class="feature"><div class="feature-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><rect x="5" y="10" width="14" height="10" rx="2" stroke="#3B82F6" stroke-width="1.8" fill="none"/><path d="M8 10V7a4 4 0 0 1 8 0v3" stroke="#3B82F6" stroke-width="1.8" fill="none"/></svg></div><div><h4>Cloud &amp; Infrastructure</h4><p>Protect your cloud, endpoints and networks</p></div></div>
+            <div class="feature"><div class="feature-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="#3B82F6" stroke-width="1.8"/><path d="M12 6v6l4 2" stroke="#3B82F6" stroke-width="1.8" stroke-linecap="round"/></svg></div><div><h4>Security Analytics</h4><p>Actionable insights with advanced AI/ML</p></div></div>
+        </div>
+    </section>
+    <section class="preview-section">
+        <div class="preview-container">
+            <div class="preview-mockup">
+                <div class="mockup-sidebar">
+                    <div class="mockup-brand"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M12 2L3 6v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V6l-9-4z" fill="#3B82F6"/></svg><span>SentinelX</span></div>
+                    <div class="mockup-menu"><div class="mockup-item active">Overview</div><div class="mockup-item">Threats</div><div class="mockup-item">Incidents</div><div class="mockup-item">Assets</div><div class="mockup-item">Reports</div><div class="mockup-item">Settings</div></div>
+                </div>
+                <div class="mockup-main">
+                    <div class="mockup-header"><div><div class="mockup-h1">Security Overview</div><div class="mockup-h2">Real-time threat intelligence</div></div><div class="mockup-user"><div class="mockup-avatar">JD</div><div><div class="mockup-uname">John Doe</div><div class="mockup-urole">Security Admin</div></div></div></div>
+                    <div class="mockup-kpis">
+                        <div class="kpi"><div class="kpi-label">Total Threats</div><div class="kpi-value">247</div><div class="kpi-trend up">↑ 15%</div></div>
+                        <div class="kpi"><div class="kpi-label">Blocked</div><div class="kpi-value">238</div><div class="kpi-trend up">↑ 22%</div></div>
+                        <div class="kpi"><div class="kpi-label">In Progress</div><div class="kpi-value">6</div><div class="kpi-trend down">↓ 40%</div></div>
+                        <div class="kpi"><div class="kpi-label">Resolved</div><div class="kpi-value">3</div><div class="kpi-trend up">↑ 95%</div></div>
+                    </div>
+                </div>
+            </div>
+            <div class="preview-text">
+                <div class="hero-eyebrow">BUILT FOR MODERN SECURITY TEAMS</div>
+                <h2 class="preview-h">Complete visibility.<br><span class="accent-cyan">Total control.</span></h2>
+                <p class="preview-sub">Get a unified view of your security posture with real-time monitoring, intelligent alerts and automated response capabilities — all in one platform.</p>
+                <ul class="preview-checklist">
+                    <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M5 12l5 5L20 7" stroke="#22D3EE" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg> Real-time threat intelligence</li>
+                    <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M5 12l5 5L20 7" stroke="#22D3EE" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg> AI-powered analytics</li>
+                    <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M5 12l5 5L20 7" stroke="#22D3EE" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg> Seamless integrations</li>
+                    <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M5 12l5 5L20 7" stroke="#22D3EE" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg> Scales with your business</li>
+                </ul>
+                <button class="btn btn-primary btn-lg" onclick="showAppView()">Explore the Platform
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" style="margin-left:8px;"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </button>
+            </div>
+        </div>
+    </section>
+</div>
+
+<!-- ===================== PLATFORM VIEW ===================== -->
+<div id="view-platform" class="page-view hidden">
+    <section class="content-hero">
+        <div class="content-hero-inner">
+            <div class="content-hero-left">
+                <div class="hero-eyebrow">OUR PLATFORM</div>
+                <h1 class="content-h1">Complete Visibility.<br><span class="accent-cyan">Smarter Decisions.</span></h1>
+                <p class="content-sub">SupplyChain Sentinel brings together AI, threat intelligence and real-time monitoring in one unified platform — so your security team can detect, respond and stay ahead of risks.</p>
+                <div class="hero-buttons">
+                    <button class="btn btn-primary btn-lg" onclick="showAppView()">Explore Platform
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" style="margin-left:8px;"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </button>
+                    <button class="btn btn-outline btn-lg" onclick="showToast('Demo video coming soon')">Watch Demo</button>
+                </div>
+            </div>
+            <div class="content-hero-right">
+                <div class="mockup-mini">
+                    <div class="mockup-mini-header">
+                        <span class="mm-dot"></span><span class="mm-dot"></span><span class="mm-dot"></span>
+                        <span class="mm-title">Overview</span>
+                    </div>
+                    <div class="mockup-mini-body">
+                        <div class="mm-stat"><span>Total Threats</span><strong>247</strong><em>↑ 10%</em></div>
+                        <div class="mm-stat"><span>Blocked</span><strong>238</strong><em>↑ 22%</em></div>
+                        <div class="mm-stat"><span>In Progress</span><strong>6</strong><em>↓ 40%</em></div>
+                        <div class="mm-risk-card">
+                            <div class="mmr-label">Risk Score</div>
+                            <div class="mmr-value">High</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="feature-grid">
+        <div class="feature-card" onclick="showToast('Real-time monitoring feature detail')"><div class="fc-icon">📡</div><h4>Real-time Monitoring</h4><p>Track your supply chain across global networks in real-time.</p><span class="fc-link">Learn more →</span></div>
+        <div class="feature-card" onclick="showToast('AI-Powered Analytics feature detail')"><div class="fc-icon">🧠</div><h4>AI-Powered Analytics</h4><p>Detect anomalies and predict potential threats before they occur.</p><span class="fc-link">Learn more →</span></div>
+        <div class="feature-card" onclick="showToast('Unified Dashboard feature detail')"><div class="fc-icon">📊</div><h4>Unified Dashboard</h4><p>Get a single view of risks, assets, vendors and incidents.</p><span class="fc-link">Learn more →</span></div>
+        <div class="feature-card" onclick="showToast('Automated Response feature detail')"><div class="fc-icon">⚡</div><h4>Automated Response</h4><p>Reduce response time with intelligent workflows and playbooks.</p><span class="fc-link">Learn more →</span></div>
+        <div class="feature-card" onclick="showToast('Seamless Integrations feature detail')"><div class="fc-icon">🔌</div><h4>Seamless Integrations</h4><p>Connect with your existing tools and infrastructure.</p><span class="fc-link">Learn more →</span></div>
+    </section>
+    <section class="cta-strip">
+        <div class="cta-inner">
+            <div class="cta-left">
+                <div class="cta-icon">🛡️</div>
+                <div><h4>Built for modern security teams.</h4><p>Simple to use. Powerful under the hood. Designed for enterprises.</p></div>
+            </div>
+            <button class="btn btn-primary" onclick="showView('pricing')">See How It Works →</button>
+        </div>
+    </section>
+</div>
+
+<!-- ===================== SOLUTIONS VIEW ===================== -->
+<div id="view-solutions" class="page-view hidden">
+    <section class="content-hero">
+        <div class="content-hero-inner">
+            <div class="content-hero-left">
+                <div class="hero-eyebrow">OUR SOLUTIONS</div>
+                <h1 class="content-h1">Tailored Security for<br><span class="accent-cyan">Every Layer of Your Supply Chain</span></h1>
+                <p class="content-sub">From supplier risk to real-time threat detection, our solutions help you protect what matters — your data, your operations and your customers.</p>
+            </div>
+            <div class="content-hero-right">
+                <div class="orbit-visual">
+                    <div class="orbit-center">
+                        <svg width="60" height="60" viewBox="0 0 24 24" fill="none">
+                            <path d="M12 2L3 6v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V6l-9-4z" fill="#3B82F6"/>
+                            <path d="M10 12l1.8 1.8L16 9.5" stroke="#fff" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <div class="orbit-ring"></div>
+                    <div class="orbit-item o1">Suppliers</div>
+                    <div class="orbit-item o2">Vendors</div>
+                    <div class="orbit-item o3">Logistics</div>
+                    <div class="orbit-item o4">Customers</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="feature-grid">
+        <div class="feature-card" onclick="showToast('Supplier Risk Management detail')"><div class="fc-icon">👥</div><h4>Supplier Risk Management</h4><p>Assess and monitor supplier vulnerabilities in real time.</p><span class="fc-link">Learn more →</span></div>
+        <div class="feature-card" onclick="showToast('Threat Detection & Response detail')"><div class="fc-icon">🛡️</div><h4>Threat Detection &amp; Response</h4><p>Identify and stop threats before they spread.</p><span class="fc-link">Learn more →</span></div>
+        <div class="feature-card" onclick="showToast('Compliance & Reporting detail')"><div class="fc-icon">📋</div><h4>Compliance &amp; Reporting</h4><p>Stay compliant with global standards and regulations.</p><span class="fc-link">Learn more →</span></div>
+        <div class="feature-card" onclick="showToast('Third-Party Risk Monitoring detail')"><div class="fc-icon">🔗</div><h4>Third-Party Risk Monitoring</h4><p>Track external partners and vendors for potential risks.</p><span class="fc-link">Learn more →</span></div>
+        <div class="feature-card" onclick="showToast('Incident Response detail')"><div class="fc-icon">⚠️</div><h4>Incident Response</h4><p>Automate and streamline your response workflows.</p><span class="fc-link">Learn more →</span></div>
+        <div class="feature-card" onclick="showToast('Custom Solutions detail')"><div class="fc-icon">⚙️</div><h4>Custom Solutions</h4><p>Get a solution built around your unique needs.</p><span class="fc-link">Learn more →</span></div>
+    </section>
+    <section class="cta-strip">
+        <div class="cta-inner">
+            <div class="cta-left">
+                <div class="cta-icon">🛡️</div>
+                <div><h4>Stronger security. A more resilient supply chain.</h4><p>Our solutions are designed to give you control, clarity and confidence — at every step.</p></div>
+            </div>
+            <button class="btn btn-primary" onclick="showAppView()">Get Started →</button>
+        </div>
+    </section>
+</div>
+
+<!-- ===================== RESOURCES VIEW ===================== -->
+<div id="view-resources" class="page-view hidden">
+    <section class="content-hero">
+        <div class="content-hero-inner">
+            <div class="content-hero-left">
+                <div class="hero-eyebrow">RESOURCES</div>
+                <h1 class="content-h1">Learn. Prepare.<br><span class="accent-cyan">Protect.</span></h1>
+                <p class="content-sub">Guides, research, and best practices to help your team stay ahead of supply chain threats.</p>
+            </div>
+        </div>
+    </section>
+    <section class="feature-grid">
+        <div class="feature-card" onclick="showToast('Opening: The 2026 Supply Chain Threat Report')"><div class="fc-icon">📕</div><h4>The 2026 Supply Chain Threat Report</h4><p>Research on the top 10 supply chain attack vectors this year.</p><span class="fc-link">Read Report →</span></div>
+        <div class="feature-card" onclick="showToast('Opening: SBOM Explained guide')"><div class="fc-icon">📘</div><h4>SBOM Explained</h4><p>A practical guide to Software Bill of Materials for security teams.</p><span class="fc-link">Read Guide →</span></div>
+        <div class="feature-card" onclick="showToast('Opening: Preventing the Ripple Effect')"><div class="fc-icon">📗</div><h4>Preventing the Ripple Effect</h4><p>How to contain a single compromised dependency before it spreads.</p><span class="fc-link">Read Article →</span></div>
+        <div class="feature-card" onclick="showToast('Opening: Case study')"><div class="fc-icon">📙</div><h4>Case Study: FinTech at Scale</h4><p>How a fintech firm reduced supply chain risk exposure by 78%.</p><span class="fc-link">Read Case Study →</span></div>
+    </section>
+</div>
+
+<!-- ===================== PRICING VIEW ===================== -->
+<div id="view-pricing" class="page-view hidden">
+    <section class="content-hero">
+        <div class="content-hero-inner">
+            <div class="content-hero-left">
+                <div class="hero-eyebrow">PRICING</div>
+                <h1 class="content-h1">Simple, Transparent Pricing<br><span class="accent-cyan">for Stronger Security</span></h1>
+                <p class="content-sub">Choose the plan that fits your team's needs. No hidden fees. No surprises. Just powerful security, built for your business.</p>
+            </div>
+            <div class="content-hero-right" style="align-self: flex-start;">
+                <div class="billing-toggle">
+                    <button class="bt-btn active" id="bt-monthly" onclick="setBilling('monthly')">Monthly</button>
+                    <button class="bt-btn" id="bt-yearly" onclick="setBilling('yearly')">Yearly <span class="bt-save">Save 20%</span></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="pricing-grid">
+        <div class="pricing-card">
+            <div class="pc-name">Starter</div>
+            <div class="pc-desc">Free forever for individual developers.</div>
+            <div class="pc-price">
+                <span class="pc-amount" style="font-size: 36px;">Free</span>
+            </div>
+            <ul class="pc-features">
+                <li>✓ Up to 5 users</li>
+                <li>✓ Basic threat monitoring</li>
+                <li>✓ Email support</li>
+                <li>✓ Weekly SBOM scans</li>
+                <li>✓ Full access to Graph &amp; Table views</li>
+            </ul>
+            <button class="btn btn-outline pc-btn" onclick="registerFree()">Get Started Free</button>
+        </div>
+
+        <div class="pricing-card popular">
+            <div class="pc-badge">MOST POPULAR</div>
+            <div class="pc-name">Business</div>
+            <div class="pc-desc">Advanced features for growing teams.</div>
+            <div class="pc-price">
+                <span class="pc-currency">₹</span><span class="pc-amount" data-monthly="2599" data-yearly="2079">2599</span>
+                <span class="pc-period">/month</span>
+            </div>
+            <ul class="pc-features">
+                <li>✓ Up to 25 users</li>
+                <li>✓ Real-time monitoring</li>
+                <li>✓ AI-powered analytics</li>
+                <li>✓ Priority support</li>
+                <li>✓ Daily SBOM scans</li>
+                <li>✓ Heatmap &amp; Timeline views</li>
+            </ul>
+            <button class="btn btn-primary pc-btn" onclick="buyPlan('Business', 2599)">Buy Business Pack</button>
+        </div>
+
+        <div class="pricing-card">
+            <div class="pc-name">Enterprise</div>
+            <div class="pc-desc">For large organizations with complex needs.</div>
+            <div class="pc-price">
+                <span class="pc-currency">₹</span><span class="pc-amount" data-monthly="4999" data-yearly="3999">4999</span>
+                <span class="pc-period">/month</span>
+            </div>
+            <ul class="pc-features">
+                <li>✓ Unlimited users</li>
+                <li>✓ Full platform access</li>
+                <li>✓ Custom integrations</li>
+                <li>✓ Dedicated account manager</li>
+                <li>✓ Continuous real-time scanning</li>
+                <li>✓ SOC 2 / ISO 27001 reports</li>
+            </ul>
+            <button class="btn btn-outline pc-btn" onclick="buyPlan('Enterprise', 4999)">Buy Enterprise Pack</button>
+        </div>
+
+        <div class="pricing-card">
+            <div class="pc-name">Custom</div>
+            <div class="pc-desc">Tailored solutions for unique requirements.</div>
+            <div class="pc-price pc-price-custom">Let's Talk</div>
+            <ul class="pc-features">
+                <li>✓ Bespoke features</li>
+                <li>✓ Dedicated infrastructure</li>
+                <li>✓ 24/7 support</li>
+                <li>✓ Custom SLA</li>
+            </ul>
+            <button class="btn btn-outline pc-btn" onclick="showToast('Sales team will reach out')">Contact Sales</button>
+        </div>
+    </section>
+
+    <section class="pricing-footer-strip">
+        <div class="pfs-item"><div class="pfs-icon">🧪</div><div><strong>30-day free trial</strong><span>Try all features, no credit card required.</span></div></div>
+        <div class="pfs-item"><div class="pfs-icon">🔄</div><div><strong>Cancel anytime</strong><span>No long-term contracts.</span></div></div>
+        <div class="pfs-item"><div class="pfs-icon">🔒</div><div><strong>Enterprise-grade security</strong><span>Your data is always protected.</span></div></div>
+    </section>
+</div>
+
+<!-- ===================== SIGN IN VIEW ===================== -->
+<div id="view-signin" class="page-view hidden">
+    <div class="signin-wrap">
+        <div class="signin-left">
+            <div class="signin-shield">
+                <svg width="120" height="120" viewBox="0 0 24 24" fill="none">
+                    <defs>
+                        <linearGradient id="sgrad" x1="0" y1="0" x2="0" y2="1">
+                            <stop offset="0%" stop-color="#3B82F6"/>
+                            <stop offset="100%" stop-color="#1E40AF"/>
+                        </linearGradient>
+                    </defs>
+                    <path d="M12 2L3 6v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V6l-9-4z" fill="url(#sgrad)"/>
+                    <path d="M10 12l1.8 1.8L16 9.5" stroke="#fff" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </div>
+            <h2 class="signin-brand">SupplyChain <span class="brand-accent">Sentinel</span></h2>
+            <p class="signin-tag">Smarter Security. Stronger Supply Chains.</p>
+            <p class="signin-sub">Join companies worldwide in building a safer, more resilient supply chain.</p>
+            <div class="signin-wave"></div>
+        </div>
+        <div class="signin-right">
+            <div class="signin-form">
+                <h2>Welcome Back</h2>
+                <p class="signin-form-sub">Sign in to your account</p>
+
+                <label class="form-label">Email address</label>
+                <div class="form-input-wrap">
+                    <span class="fi-icon">✉</span>
+                    <input type="email" class="form-input" placeholder="you@company.com" id="signin-email">
+                </div>
+
+                <label class="form-label">Password</label>
+                <div class="form-input-wrap">
+                    <span class="fi-icon">🔒</span>
+                    <input type="password" class="form-input" placeholder="Enter your password" id="signin-password">
+                    <span class="fi-eye" onclick="togglePw()">👁</span>
+                </div>
+
+                <div class="signin-row">
+                    <label class="chk"><input type="checkbox"> Remember me</label>
+                    <a href="#" onclick="event.preventDefault(); showToast('Password reset link sent');">Forgot password?</a>
+                </div>
+
+                <button class="btn btn-primary btn-lg" style="width:100%;" onclick="signIn()">Sign In →</button>
+
+                <div class="divider"><span>Or continue with</span></div>
+
+                <div class="social-row">
+                    <button class="social-btn" onclick="showToast('Google OAuth coming soon')"><span style="color:#EA4335; font-weight:800;">G</span> Google</button>
+                    <button class="social-btn" onclick="showToast('Microsoft OAuth coming soon')"><span style="color:#00A4EF; font-weight:800;">⊞</span> Microsoft</button>
+                </div>
+
+                <p class="signin-bottom">Don't have an account? <a href="#" onclick="event.preventDefault(); showAppView();">Request Demo</a></p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ===================== DASHBOARD VIEW ===================== -->
+<div id="view-dashboard" class="page-view hidden">
+
+    <div id="sidebar" class="sidebar">
+        <div class="sidebar-header">
+            <h3>Navigation</h3>
+            <span style="cursor:pointer; color: #94A3B8; font-size: 18px;" onclick="toggleSidebar()">✕</span>
+        </div>
+        <a href="#" onclick="event.preventDefault(); showView('landing');">🏠 Landing Page</a>
+        <a href="#" onclick="event.preventDefault(); toggleSidebar();">📊 Dashboard</a>
+        <a href="#" onclick="event.preventDefault(); toggleSidebar(); showToast('History coming soon');">🕒 My History</a>
+        <a href="#" onclick="event.preventDefault(); toggleSidebar(); showView('pricing');" style="color: #22D3EE;">💎 Upgrade Plan</a>
+        <a href="#" onclick="event.preventDefault(); toggleSidebar(); showView('signin');" style="color: #EF4444; margin-top: auto;">🚪 Logout</a>
+    </div>
+    <div id="sidebar-overlay" class="sidebar-overlay" onclick="toggleSidebar()"></div>
+
+    <header class="app-header">
+        <div class="header-left">
+            <div class="hamburger" onclick="toggleSidebar()">☰</div>
+            <button class="back-btn" onclick="showView('landing')" title="Back to Home">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M19 12H5M11 18l-6-6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+            <div class="app-brand">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 2L3 6v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V6l-9-4z" fill="#3B82F6"/><path d="M10 12l1.8 1.8L16 9.5" stroke="#fff" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                <span>SupplyChain <span class="brand-accent">Sentinel</span></span>
+            </div>
+            <span class="plan-badge">FREE TRIAL</span>
+        </div>
+        <div class="header-center">Intelligent Risk Analysis &amp; Mitigation Platform</div>
+        <div class="header-right">
+            <button class="upgrade-btn" onclick="showView('pricing')">💎 Upgrade</button>
+            <span class="status-dot"></span>
+            <span>Demo Analyst</span>
+            <div class="user-avatar">DA</div>
+        </div>
+    </header>
+
+    <div class="dashboard">
+        <aside class="panel left-panel">
+            <div class="panel-header">
+                <h3><span class="num-badge">1</span> Upload SBOM</h3>
+                <span class="close-x">✕</span>
+            </div>
+            <div class="drop-zone" id="drop-zone" onclick="document.getElementById('sbom-upload').click()">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none"><path d="M12 16V4M7 9l5-5 5 5" stroke="#3B82F6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M3 15v3a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-3" stroke="#3B82F6" stroke-width="2" stroke-linecap="round"/></svg>
+                <div class="drop-title">Choose File</div>
+                <div class="drop-sub">or drag and drop</div>
+                <div class="drop-formats">Supports: .json, .spdx, .xml</div>
+                <input type="file" id="sbom-upload" accept=".json,.xml,.spdx" hidden>
+            </div>
+            <div id="file-info" class="file-info hidden">
+                <div class="file-icon">📄</div>
+                <div class="file-meta"><div class="file-name" id="file-name">-</div><div class="file-size" id="file-size">-</div></div>
+                <span class="file-remove">✕</span>
+            </div>
+            <button id="analyze-btn" class="analyze-btn" disabled>Analyze Graph
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+
+            <div class="section-title">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M12 2L3 6v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V6l-9-4z" stroke="#EF4444" stroke-width="2" fill="none"/></svg>
+                MITIGATION PRIORITIES
+            </div>
+            <p class="hint-sm">Focus remediation efforts here first to contain the blast radius.</p>
+            <ul id="priority-list" class="priority-list">
+                <li class="empty-state">Upload an SBOM to see priorities.</li>
+            </ul>
+            <div class="quick-tip">
+                <div class="tip-header">⚡ Quick Tip</div>
+                <p>Focus on critical vulnerabilities in direct dependencies first for maximum impact.</p>
+            </div>
+        </aside>
+
+        <main class="panel center-panel">
+            <div class="graph-header">
+                <div class="graph-title">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="3" stroke="#3B82F6" stroke-width="2"/><circle cx="4" cy="6" r="2" stroke="#3B82F6" stroke-width="2"/><circle cx="20" cy="6" r="2" stroke="#3B82F6" stroke-width="2"/><circle cx="4" cy="18" r="2" stroke="#3B82F6" stroke-width="2"/><circle cx="20" cy="18" r="2" stroke="#3B82F6" stroke-width="2"/></svg>
+                    <div><h3>Dependency Map</h3><p>Visualize your software supply chain and identify risky components.</p></div>
+                </div>
+                <div class="view-toggle">
+                    <button class="active" id="btn-graph-view" onclick="setGraphView('graph')">Graph</button>
+                    <button id="btn-table-view" onclick="setGraphView('table')">Table</button>
+                    <button id="btn-heatmap-view" class="premium-toggle" onclick="setGraphView('heatmap')">
+                        Heatmap <span class="lock-icon">🔒</span>
+                    </button>
+                    <button id="btn-timeline-view" class="premium-toggle" onclick="setGraphView('timeline')">
+                        Timeline <span class="lock-icon">🔒</span>
+                    </button>
+                </div>
+                <div class="legend-inline">
+                    <span><span class="dot green"></span> Safe</span>
+                    <span><span class="dot yellow"></span> At Risk</span>
+                    <span><span class="dot red"></span> Critical</span>
+                </div>
+            </div>
+            <div class="graph-canvas">
+                <svg id="graph-svg"></svg>
+                <div id="table-view" class="table-view hidden">
+                    <table class="dep-table">
+                        <thead>
+                            <tr>
+                                <th onclick="sortTable('name')" class="sortable">Package</th>
+                                <th onclick="sortTable('version')" class="sortable">Version</th>
+                                <th onclick="sortTable('type')" class="sortable">Type</th>
+                                <th onclick="sortTable('risk_score')" class="sortable">Risk</th>
+                                <th onclick="sortTable('in_degree')" class="sortable">Dependents</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody id="dep-table-body"></tbody>
+                    </table>
+                </div>
+                <div id="heatmap-view" class="premium-view hidden">
+                    <div class="premium-overlay">
+                        <div class="po-icon">💎</div>
+                        <h3 class="po-title">Heatmap View</h3>
+                        <p class="po-desc">Visualize risk concentration across your entire supply chain on a single grid. Instantly spot hotspots.</p>
+                        <button class="btn btn-primary po-btn" onclick="showPremiumModal('Heatmap View')">Unlock with Premium →</button>
+                    </div>
+                </div>
+                <div id="timeline-view" class="premium-view hidden">
+                    <div class="premium-overlay">
+                        <div class="po-icon">💎</div>
+                        <h3 class="po-title">Timeline View</h3>
+                        <p class="po-desc">Track when each vulnerability was introduced, when it was patched, and correlate them with your release cycles.</p>
+                        <button class="btn btn-primary po-btn" onclick="showPremiumModal('Timeline View')">Unlock with Premium →</button>
+                    </div>
+                </div>
+                <div class="zoom-controls" id="zoom-controls">
+                    <button id="zoom-in">+</button>
+                    <button id="zoom-out">−</button>
+                    <button id="zoom-reset">⛶</button>
+                    <span class="zoom-level" id="zoom-level">100%</span>
+                </div>
+            </div>
+        </main>
+
+        <aside class="panel right-panel">
+            <div class="inspector-header">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><circle cx="11" cy="11" r="7" stroke="#3B82F6" stroke-width="2"/><path d="M16.5 16.5L21 21" stroke="#3B82F6" stroke-width="2" stroke-linecap="round"/></svg>
+                <h3>Inspector</h3>
+            </div>
+            <p class="hint-sm">Select a node on the graph to inspect its risk profile, dependencies and details.</p>
+
+            <button id="simulate-btn" class="simulate-btn" disabled>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M12 2L3 6v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V6l-9-4z" stroke="currentColor" stroke-width="2" fill="none"/></svg>
+                Simulate Compromise
+            </button>
+
+            <div class="premium-actions">
+                <div class="premium-label">Premium Features</div>
+                <button class="premium-btn" onclick="showPremiumModal('Real-Time Alerts')">
+                    <span class="pb-icon">🔔</span>
+                    <div class="pb-text">
+                        <span class="pb-title">Real-Time Alerts</span>
+                        <span class="pb-sub">Instant notifications for new CVEs</span>
+                    </div>
+                    <span class="pb-lock">🔒</span>
+                </button>
+                <button class="premium-btn" onclick="showPremiumModal('Auto-Remediation')">
+                    <span class="pb-icon">🤖</span>
+                    <div class="pb-text">
+                        <span class="pb-title">Auto-Remediation</span>
+                        <span class="pb-sub">Auto-patch vulnerable dependencies</span>
+                    </div>
+                    <span class="pb-lock">🔒</span>
+                </button>
+            </div>
+
+            <div id="node-info" class="node-info">
+                <p class="empty-state">Select a node on the graph to inspect its risk profile.</p>
+            </div>
+        </aside>
+    </div>
+</div>
+
+<!-- ===================== DETAILS MODAL ===================== -->
+<div id="details-modal" class="modal-overlay hidden">
+    <div class="modal-content">
+        <div class="modal-header">
+            <div class="modal-title-wrap">
+                <div class="modal-icon" id="modal-icon">📦</div>
+                <div>
+                    <div class="modal-title" id="modal-title">Package Details</div>
+                    <div class="modal-subtitle" id="modal-subtitle">Detailed vulnerability report</div>
+                </div>
+            </div>
+            <button class="modal-close" onclick="closeModal()">✕</button>
+        </div>
+        <div class="modal-body">
+            <div class="modal-section">
+                <div class="modal-section-title">Risk Assessment</div>
+                <div class="risk-meter">
+                    <div class="risk-meter-bar"><div class="risk-meter-fill" id="risk-meter-fill"></div></div>
+                    <div class="risk-meter-labels"><span>0</span><span>25</span><span>50</span><span>75</span><span>100</span></div>
+                </div>
+                <div class="risk-score-display" id="risk-score-display">-- / 100</div>
+            </div>
+            <div class="modal-section">
+                <div class="modal-section-title">🛡️ Vulnerability Intelligence</div>
+                <div id="cve-content" class="cve-content"></div>
+            </div>
+            <div class="modal-section">
+                <div class="modal-section-title">🔗 Dependency Chain</div>
+                <div id="dep-chain-content" class="dep-chain-content"></div>
+            </div>
+            <div class="modal-section">
+                <div class="modal-section-title">🏢 Affected Applications</div>
+                <div id="affected-apps-content" class="affected-apps-content"></div>
+            </div>
+            <div class="modal-section">
+                <div class="modal-section-title">🛠️ Recommended Mitigation</div>
+                <div id="mitigation-content" class="mitigation-content"></div>
+            </div>
+            <div class="modal-section premium-teaser">
+                <div class="modal-section-title">💎 Unlock More with Premium</div>
+                <p style="font-size:12px;color:#94A3B8;margin-bottom:12px;">Get real-time CVE feeds, auto-remediation, and compliance reports.</p>
+                <button class="btn btn-primary" style="width:100%;" onclick="closeModal(); showView('pricing');">Upgrade to Premium →</button>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <button class="btn btn-outline" onclick="closeModal()">Close</button>
+            <button class="btn btn-primary" id="modal-export-btn">📥 Export Report</button>
+        </div>
+    </div>
+</div>
+
+<!-- ===================== PREMIUM MODAL ===================== -->
+<div id="premium-modal" class="modal-overlay hidden">
+    <div class="modal-content premium-modal-content">
+        <div class="premium-header">
+            <div class="premium-icon">💎</div>
+            <button class="modal-close" onclick="closePremiumModal()">✕</button>
+        </div>
+        <h2 class="premium-title">Unlock Premium Feature</h2>
+        <p class="premium-sub" id="premium-feature-name">This feature is available on Business plan and above.</p>
+        <div class="premium-benefits">
+            <div class="pb-item"><span class="pb-check">✓</span> Real-time CVE & threat intelligence feeds</div>
+            <div class="pb-item"><span class="pb-check">✓</span> Automated dependency patching &amp; rollout</div>
+            <div class="pb-item"><span class="pb-check">✓</span> Compliance reports (SOC 2, ISO 27001, SLSA)</div>
+            <div class="pb-item"><span class="pb-check">✓</span> 24/7 dedicated security support</div>
+            <div class="pb-item"><span class="pb-check">✓</span> Unlimited SBOM scans and historical trend analysis</div>
+        </div>
+        <div class="premium-plans-preview">
+            <div class="pp-card">
+                <div class="pp-name">Business</div>
+                <div class="pp-price">₹2599<span>/mo</span></div>
+                <div class="pp-tag">Best for growing teams</div>
+            </div>
+            <div class="pp-card featured">
+                <div class="pp-name">Enterprise</div>
+                <div class="pp-price">₹4999<span>/mo</span></div>
+                <div class="pp-tag">Best for large organizations</div>
+            </div>
+        </div>
+        <div class="premium-actions-row">
+            <button class="btn btn-outline" onclick="closePremiumModal()">Maybe Later</button>
+            <button class="btn btn-primary" onclick="closePremiumModal(); showView('pricing');">View All Plans →</button>
+        </div>
+    </div>
+</div>
+
+<script src="https://d3js.org/d3.v7.min.js"></script>
+<script src="/app.js"></script>
+</body>
+</html>
