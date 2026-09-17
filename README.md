@@ -4,7 +4,7 @@
 > Domain: Cybersecurity 
 
 Contributors :- 
-sarthak, Zain
+Sarthak, Zain
 
 ---
 
