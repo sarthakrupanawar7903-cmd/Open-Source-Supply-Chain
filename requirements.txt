@@ -1,4 +1,6 @@
-
 fastapi
+uvicorn
 networkx
+requests
 python-multipart
+pydantic
