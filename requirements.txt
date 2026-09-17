@@ -4,3 +4,4 @@ networkx
 requests
 python-multipart
 pydantic
+pandas
