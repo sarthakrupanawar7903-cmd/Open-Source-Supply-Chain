@@ -3,7 +3,10 @@
 > Problem Statement: **Open Source Supply Chains: The Ripple Effect**  
 > Domain: Cybersecurity 
 
-Contributors :- sarthak
+Contributors :- 
+sarthak
+Zain
+
 ---
 
 ##  Problem Statement
